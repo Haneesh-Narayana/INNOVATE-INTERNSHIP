@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload and Model Integration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Traffic Sign Analysis Tool</h1>
+        <form id="upload-form" enctype="multipart/form-data">
+            <label for="image-upload">Choose an Image</label>
+            <input type="file" id="image-upload" accept="image/*" required>
+            <button type="submit">Upload and Analyze</button>
+        </form>
+        <div id="result">
+            <!-- Uploaded image will be displayed here -->
+            <img id="uploaded-image" src="#" alt="Uploaded Image" style="display: none;">
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
